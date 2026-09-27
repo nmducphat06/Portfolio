@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Minh Duc — Cybersecurity Intern</title>
+  <meta name="description" content="Portfolio of Nguyen Minh Duc, Information Assurance student and Cybersecurity Intern." />
+
+  <!-- Google Font: JetBrains Mono for that terminal/monospace feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">nmducphat06<span class="cursor">_</span></a>
+
+      <!-- Hamburger button, shown only on mobile -->
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#certificates">certs</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO / HOME ============ -->
+    <section id="home" class="hero">
+      <div class="hero__grid">
+
+        <!-- Terminal window mock: this IS the hero, no generic gradient banner -->
+        <div class="terminal" role="img" aria-label="Terminal window introducing Nguyen Minh Duc">
+          <div class="terminal__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">duc@fpt-university: ~</span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="type-target" id="typeName"><!-- filled by JS --></p>
+            <p><span class="prompt">$</span> cat role.txt</p>
+            <p class="dim">Cybersecurity Intern / Information Assurance Student</p>
+            <p><span class="prompt">$</span> cat tagline.txt</p>
+            <p class="dim">Securing networks, one packet at a time.</p>
+            <p><span class="prompt">$</span> <span class="type-cursor" id="liveCursor">_</span></p>
+          </div>
+        </div>
+
+        <!-- Photo placeholder — user swaps this <img> src later -->
+        <div class="hero__photo-wrap">
+          <div class="hero__photo" id="photoPlaceholder">
+            <img src="portrait.jpg" alt="Nguyen Minh Duc">
+          </div>
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section fade-section">
+      <h2 class="section__heading"># about</h2>
+
+      <div class="about__grid">
+        <p class="about__summary">
+          Information Assurance student at FPT University with a foundation in computer
+          networks and system security. Seeking a Cybersecurity Internship to apply
+          hands-on experience in network security, Windows security, and vulnerability
+          assessment.
+        </p>
+
+        <div class="edu-card">
+          <h3 class="edu-card__school">FPT University</h3>
+          <p class="edu-card__major">B.Eng. Information Assurance</p>
+          <div class="edu-card__meta">
+            <span>2024 — Present</span>
+            <span>GPA 3.0 / 4.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section fade-section">
+      <h2 class="section__heading"># skills</h2>
+
+      <div class="skills__grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Operating Systems</h3>
+          <ul class="skill-tags">
+            <li>Linux (Ubuntu, Kali)</li>
+            <li>Windows</li>
+            <li>FlareVM</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Security</h3>
+          <ul class="skill-tags">
+            <li>Network Security</li>
+            <li>Vulnerability Assessment</li>
+            <li>Malware Analysis</li>
+            <li>Intrusion Detection</li>
+            <li>Windows Security</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Tools</h3>
+          <ul class="skill-tags">
+            <li>Nmap</li>
+            <li>IDA</li>
+            <li>x32dbg/x64dbg</li>
+            <li>Wireshark</li>
+            <li>ProcMon</li>
+            <li>Process Explorer</li>
+            <li>FLOSS</li>
+            <li>PEview</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Programming</h3>
+          <ul class="skill-tags">
+            <li>Python</li>
+            <li>PowerShell</li>
+            <li>C / C++</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section fade-section">
+      <h2 class="section__heading"># projects</h2>
+
+      <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="project-card__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="project-card__file">hips.ps1</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Windows Host Intrusion Prevention System (HIPS)</h3>
+            <p>
+              PowerShell scripts that monitor system activity, detect anomalies, and
+              log and alert on suspicious behavior in real time on a Windows host.
+            </p>
+            <ul class="tag-list">
+              <li>PowerShell</li>
+              <li>Windows Security</li>
+              <li>Logging</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="project-card__file">malware_demo.md</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Demo Malware Development</h3>
+            <p>
+              Built a demo malware sample for educational red-team practice in an isolated lab,
+              implementing persistence mechanisms, an infostealer module, and basic C2 (command-and-control) communication
+            </p>
+            <ul class="tag-list">
+              <li>Persistence</li>
+              <li>Infostealer</li>
+              <li>C2</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="project-card__file">malware_lab.txt</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Windows Malware Analysis Lab</h3>
+            <p>
+              Static and dynamic malware analysis inside an isolated FLARE-VM
+              environment using ProcMon, Process Explorer, Wireshark, and Regshot,
+              with IOC extraction.
+            </p>
+            <ul class="tag-list">
+              <li>FlareVM</li>
+              <li>ProcMon</li>
+              <li>Wireshark</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section id="certificates" class="section fade-section">
+      <h2 class="section__heading"># certificates</h2>
+
+      <ul class="cert-list">
+        <li>
+          <span class="prompt">&gt;</span> CertNexus Certified Ethical Emerging Technologist Specialization
+        </li>
+        <li>
+          <span class="prompt">&gt;</span> Python for Everybody Specialization
+        </li>
+        <li>
+          <span class="prompt">&gt;</span> Applied Cryptography Specialization
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section fade-section">
+      <h2 class="section__heading"># contact</h2>
+
+      <div class="contact__grid">
+
+        <div class="contact__info">
+          <p>
+            <span class="contact__label">location</span>
+            Mai Dich, Cau Giay, Ha Noi
+          </p>
+          <p>
+            <span class="contact__label">email</span>
+            <a href="mailto:nmducphat06@gmail.com">nmducphat06@gmail.com</a>
+          </p>
+          <p>
+            <span class="contact__label">github</span>
+            <a href="https://github.com/nmducphat06" target="_blank" rel="noopener noreferrer">github.com/nmducphat06</a>
+          </p>
+        </div>
+
+        <!-- Front-end only form. No backend: JS just shows a confirmation message. -->
+        <form class="contact-form" id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Say hello..." required></textarea>
+
+          <button type="submit" class="btn btn--primary">Send message</button>
+          <p class="contact-form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Nguyen Minh Duc. Built with HTML, CSS &amp; vanilla JS.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
