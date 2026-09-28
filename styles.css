@@ -4,9 +4,10 @@
    ============================================================ */
 :root {
   /* Colors */
-  --bg: #0d1117;            /* page background */
-  --bg-panel: #161b22;      /* card / panel background */
-  --border: #30363d;        /* borders on panels & inputs */
+  --bg: #0b1426;            /* page background */
+  --bg-deep: #070e1c;       /* title bars, darker than the page */
+  --bg-panel: #111d33;      /* card / panel background */
+  --border: #24375a;        /* borders on panels & inputs */
   --text: #c9d1d9;          /* main body text */
   --text-dim: #8b949e;      /* secondary / muted text */
   --accent: #39d353;        /* primary accent - terminal green */
@@ -118,7 +119,7 @@ textarea:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(13, 17, 23, 0.9);
+  background-color: rgba(11, 20, 38, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
@@ -211,7 +212,7 @@ textarea:focus-visible {
   align-items: center;
   gap: 0.4rem;
   padding: 0.6rem 0.8rem;
-  background-color: #0d1117;
+  background-color: var(--bg-deep);
   border-bottom: 1px solid var(--border);
 }
 
@@ -305,7 +306,7 @@ textarea:focus-visible {
 
 .btn--primary {
   background-color: var(--accent);
-  color: #0d1117;
+  color: var(--bg);
   font-weight: 700;
 }
 .btn--primary:hover {
@@ -414,7 +415,7 @@ textarea:focus-visible {
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.7rem;
-  background-color: #0d1117;
+  background-color: var(--bg-deep);
   border-bottom: 1px solid var(--border);
 }
 
@@ -533,7 +534,7 @@ textarea:focus-visible {
 }
 .contact-form .btn:hover {
   background-color: var(--accent);
-  color: #0d1117;
+  color: var(--bg);
 }
 
 .contact-form__status {
