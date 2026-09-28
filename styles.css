@@ -276,12 +276,19 @@ textarea:focus-visible {
   width: 100%;
   max-width: 220px;
   aspect-ratio: 1 / 1;
-  border: 1px dashed var(--border);
+  border: 2px solid var(--accent);
   border-radius: 50%;
+  overflow: hidden; /* keeps the image inside the circle */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-panel);
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops the photo to fill the circle without stretching */
 }
 
 .hero__photo-icon {
