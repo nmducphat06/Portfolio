@@ -63,8 +63,8 @@
 
         <!-- Photo placeholder — user swaps this <img> src later -->
         <div class="hero__photo-wrap">
-          <div class="hero__photo">
-            <img src="portrait.jpg" alt="Portrait of Nguyen Minh Duc" />
+          <div class="hero__photo" id="photoPlaceholder">
+            <img src="portrait.jpg" alt="Nguyen Minh Duc">
           </div>
           <a href="#contact" class="btn btn--primary">Get in touch</a>
         </div>
@@ -114,8 +114,8 @@
           <ul class="skill-tags">
             <li>Network Security</li>
             <li>Vulnerability Assessment</li>
-            <li>Enumeration</li>
-            <li>Privilege Escalation</li>
+            <li>Malware Analysis</li>
+            <li>Intrusion Detection</li>
             <li>Windows Security</li>
           </ul>
         </div>
@@ -124,12 +124,13 @@
           <h3 class="skill-group__title">Tools</h3>
           <ul class="skill-tags">
             <li>Nmap</li>
-            <li>Burp Suite</li>
-            <li>Metasploit</li>
+            <li>IDA</li>
+            <li>x32dbg/x64dbg</li>
             <li>Wireshark</li>
             <li>ProcMon</li>
             <li>Process Explorer</li>
             <li>FLOSS</li>
+            <li>PEview</li>
           </ul>
         </div>
 
@@ -178,18 +179,18 @@
             <span class="dot dot--red"></span>
             <span class="dot dot--yellow"></span>
             <span class="dot dot--green"></span>
-            <span class="project-card__file">htb_notes.md</span>
+            <span class="project-card__file">malware_demo.md</span>
           </div>
           <div class="project-card__body">
-            <h3>Cybersecurity Hands-on Practice (HackTheBox)</h3>
+            <h3>Demo Malware Development</h3>
             <p>
-              Vulnerability assessment and exploitation practice using Nmap, Burp Suite,
-              and Metasploit, covering enumeration and privilege escalation labs.
+              Built a demo malware sample for educational red-team practice in an isolated lab,
+              implementing persistence mechanisms, an infostealer module, and basic C2 (command-and-control) communication
             </p>
             <ul class="tag-list">
-              <li>Nmap</li>
-              <li>Burp Suite</li>
-              <li>Metasploit</li>
+              <li>Persistence</li>
+              <li>Infostealer</li>
+              <li>C2</li>
             </ul>
           </div>
         </article>
